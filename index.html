@@ -72,7 +72,7 @@
                 .style("fill", "crimson")
                 .style("opacity", 4)
                 .on("mouseover", function(d) {
-                    d3.selectAll(".modal").remove(); // Uklonite prethodne informacije i grafove
+                    d3.selectAll(".modal").remove(); 
                     var modal = d3.select("body")
                         .append("div")
                         .attr("class", "modal")
@@ -178,7 +178,7 @@
                         .style("fill", "none");
 
 
-                        // ISPOD JE STUPIČASTI GRAF
+                        
                     
                         var goalsGraphSvg = d3.select("body").append("svg")
                                         .attr("class", "graph-svg")
@@ -261,7 +261,7 @@
                             .enter().append("text")
                             .attr("class", "bar-label")
                             .attr("x", function(d) { return xGoals(d.year) + xGoals.rangeBand() / 2; })
-                            .attr("y", function(d) { return yGoals(d.goals) - 5; }) // Pomicanje iznad stupca
+                            .attr("y", function(d) { return yGoals(d.goals) - 5; }) 
                             .attr("text-anchor", "middle")
                             .attr("font-size", "18px")
                             .text(function(d) { return d.goals; });
